@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/partytown": "^2.1.1",
+    "@sideway/formula": "^3.0.1",
     "astro": "^4.12.2",
     "astro-icon": "^1.1.0",
     "astro-pagefind": "^1.6.0",
