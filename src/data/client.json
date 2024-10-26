@@ -1,15 +1,15 @@
 {
-	"name": "Code Stitch Web Designs",
-	"email": "help@codestitch.app",
-	"phoneForTel": "555-779-4407",
-	"phoneFormatted": "(555) 779-4407",
+	"name": "elementjob",
+	"email": "info@elementjob.com",
+	"phoneForTel": "+316 40 22 4333",
+	"phoneFormatted": "+316 40 22 4333",
 	"address": {
-		"lineOne": "First Address Line",
-		"lineTwo": "Second Address Line",
-		"city": "Denver",
-		"state": "CO",
-		"zip": "80206",
-		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+		"lineOne": "Gondellaan 33",
+		"lineTwo": "",
+		"city": "Zaandam",
+		"state": "Noord-Holland",
+		"zip": "1503KP",
+		"mapLink": "https://www.google.com/maps/place/Elementjob+Isolatietechniek+%26+Brandwerende+Applicaties/@52.447898,4.8385184,17z/data=!3m1!4b1!4m6!3m5!1s0x47c5fdb0c8e847b7:0xe9961822fbdf1538!8m2!3d52.447898!4d4.8385184!16s%2Fg%2F11h714bxw9?entry=ttu"
 	},
-	"domain": "www.google.com"
+	"domain": "www.elementjob.com"
 }
