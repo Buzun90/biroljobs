@@ -16,7 +16,7 @@ import CTA from "@components/CTA.astro";
       <div class="cs-content">
           <h1 class="cs-title">Professioneel Onderhoud voor Klimaatsystemen in de Randstad</h1>
           <p class="cs-text">Elementjob biedt gespecialiseerde onderhoudsdiensten in Noord-Holland, Zuid-Holland en de hele Randstad. Van airconditioning tot zonnepanelen, wij zorgen voor optimale prestaties en een gezonde werkomgeving.</p>
-          <a href="/diensten/" class="cs-button-solid">Ontdek Onze Diensten</a>
+          <a href="#services-1254" class="cs-button-solid scroll-to-services">Ontdek Onze Diensten</a>
       </div>
       <ul class="cs-card-group">
           <li class="cs-item">
@@ -365,7 +365,7 @@ import CTA from "@components/CTA.astro";
                   </p>
               </li>
           </ul>
-          <a href="/diensten/" class="cs-button-solid">Ontdek Al Onze Diensten</a>
+          <a href="/about" class="cs-button-solid">Over Ons</a>
       </div>
   </div>
 </section>
@@ -374,6 +374,24 @@ import CTA from "@components/CTA.astro";
 
   <CTA />
 </BaseLayout>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const scrollButton = document.querySelector('.scroll-to-services');
+      if (scrollButton) {
+        scrollButton.addEventListener('click', function(e) {
+          e.preventDefault();
+          const servicesSection = document.querySelector('#services-1254');
+          if (servicesSection) {
+            servicesSection.scrollIntoView({ 
+              behavior: 'smooth'
+            });
+          }
+        });
+      }
+    });
+  </script>
 
 <style lang="less">
  /*-- -------------------------- -->

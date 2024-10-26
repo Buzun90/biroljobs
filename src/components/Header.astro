@@ -6,11 +6,39 @@ import DarkModeToggle from "@components/DarkModeToggle.astro";
 
 <!-- ============================================ --><!--                 Navigation                   --><!-- ============================================ -->
 <header id="cs-navigation">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ElementJob",
+      "url": "https://www.elementjob.nl",
+      "logo": "https://www.elementjob.nl/assets/svgs/logo-black.svg",
+      "description": "ElementJob biedt professioneel onderhoud voor klimaatsystemen in de Randstad.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gondellaan 33",
+        "addressLocality": "Zaandam",
+        "addressRegion": "Noord-Holland",
+        "postalCode": "1503KP",
+        "addressCountry": "NL"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+31640224333",
+        "contactType": "customer service"
+      },
+      "sameAs": [
+        "https://www.facebook.com/ElementJob",
+        "https://www.instagram.com/elementjob",
+        "https://www.linkedin.com/company/elementjob"
+      ]
+    }
+  </script>
   <div class="cs-container">
     <!--Nav Logo-->
     <a href="/" class="cs-logo" aria-label="back to home">
       <img
-        src="/assets/svgs/logo-black.svg"
+        src="/assets/images/logo.png"
         alt=""
         width="210"
         height="29"
@@ -88,7 +116,7 @@ import DarkModeToggle from "@components/DarkModeToggle.astro";
         </ul>
       </div>
     </nav>
-    <a href="/contact" class="cs-button-solid cs-nav-button">Contact Us</a>
+    <a href="/contact" class="cs-button-solid cs-nav-button">Contact</a>
     <!--Dark Mode toggle: remove component if you don't want to enable a dark mode toggle-->
     <DarkModeToggle />
   </div>
@@ -900,3 +928,33 @@ dropdownLinks.forEach(link => {
 });   
 });
 </script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ElementJob",
+    "url": "https://www.elementjob.nl",
+    "logo": "https://www.elementjob.nl/assets/svgs/logo-black.svg",
+    "description": "ElementJob biedt professioneel onderhoud voor klimaatsystemen in de Randstad.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gondellaan 33",
+      "addressLocality": "Zaandam",
+      "addressRegion": "Noord-Holland",
+      "postalCode": "1503KP",
+      "addressCountry": "NL"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+31640224333",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "https://www.facebook.com/ElementJob",
+      "https://www.instagram.com/elementjob",
+      "https://www.linkedin.com/company/elementjob"
+    ]
+  }
+</script>
+

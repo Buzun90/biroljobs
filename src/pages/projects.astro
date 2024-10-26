@@ -5,25 +5,25 @@ import Landing from "@components/Landing.astro";
 ---
 
 <BaseLayout
-  title="Projects"
-  description="Meta description for the page"
+  title="Projecten"
+  description="Meta beschrijving voor de pagina"
 >
   <!-- ============================================ -->
   <!--                    LANDING                   -->
   <!-- ============================================ -->
 
   <Landing 
-    title="All projects"
+    title="Alle projecten"
   />
 
   <!-- ============================================ -->
-  <!--                   Gallery                    -->
+  <!--                   Galerij                    -->
   <!-- ============================================ -->
 
   <section id="gallery">
     <div class="cs-container">
       <div class="cs-image-group">
-        <!-- Row 1-->
+        <!-- Rij 1-->
         <div class="cs-row cs-row-1">
           <picture class="cs-picture cs-picture1">
             <source
@@ -38,7 +38,7 @@ import Landing from "@components/Landing.astro";
               aria-hidden="true"
               decoding="async"
               src="/assets/images/portfolio/port1.jpg"
-              alt="new hallway"
+              alt="nieuwe gang"
               loading="lazy"
               width="400"
               height="560"
@@ -57,7 +57,7 @@ import Landing from "@components/Landing.astro";
               aria-hidden="true"
               decoding="async"
               src="/assets/images/portfolio/port4.jpg"
-              alt="new home construction"
+              alt="nieuwbouw woning"
               loading="lazy"
               width="400"
               height="560"
@@ -76,15 +76,15 @@ import Landing from "@components/Landing.astro";
               aria-hidden="true"
               decoding="async"
               src="/assets/images/portfolio/port7.jpg"
-              alt="building a new wall"
+              alt="bouwen van een nieuwe muur"
               loading="lazy"
               width="400"
               height="560"
             />
           </picture>
-          <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+          <!-- Om meer afbeeldingen toe te voegen, kopieer en plak de picture tags van deze rij hier in volgorde van cs-picture-1 tot cs-picture-3 en ze behouden dezelfde lay-out -->
         </div>
-        <!-- Row 2 -->
+        <!-- Rij 2 -->
         <div class="cs-row cs-row-2">
           <picture class="cs-picture cs-picture1">
             <source
@@ -99,7 +99,7 @@ import Landing from "@components/Landing.astro";
               aria-hidden="true"
               decoding="async"
               src="/assets/images/portfolio/port2.jpg"
-              alt="new kitchen"
+              alt="nieuwe keuken"
               loading="lazy"
               width="400"
               height="560"
@@ -118,7 +118,7 @@ import Landing from "@components/Landing.astro";
               aria-hidden="true"
               decoding="async"
               src="/assets/images/portfolio/port5.jpg"
-              alt="apartment addition"
+              alt="appartement uitbreiding"
               loading="lazy"
               width="400"
               height="560"
@@ -137,15 +137,15 @@ import Landing from "@components/Landing.astro";
               aria-hidden="true"
               decoding="async"
               src="/assets/images/portfolio/port8.jpg"
-              alt="kew kitchen cabinets"
+              alt="nieuwe keukenkasten"
               loading="lazy"
               width="400"
               height="560"
             />
           </picture>
-          <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+          <!-- Om meer afbeeldingen toe te voegen, kopieer en plak de picture tags van deze rij hier in volgorde van cs-picture-1 tot cs-picture-3 en ze behouden dezelfde lay-out -->
         </div>
-        <!-- Row 3 -->
+        <!-- Rij 3 -->
         <div class="cs-row cs-row-3">
           <picture class="cs-picture cs-picture1">
             <source
@@ -160,7 +160,7 @@ import Landing from "@components/Landing.astro";
               aria-hidden="true"
               decoding="async"
               src="/assets/images/portfolio/port3.jpg"
-              alt="new kitchen"
+              alt="nieuwe keuken"
               loading="lazy"
               width="400"
               height="560"
@@ -179,7 +179,7 @@ import Landing from "@components/Landing.astro";
               aria-hidden="true"
               decoding="async"
               src="/assets/images/portfolio/port6.jpg"
-              alt="apartment addition"
+              alt="appartement uitbreiding"
               loading="lazy"
               width="400"
               height="560"
@@ -198,37 +198,37 @@ import Landing from "@components/Landing.astro";
               aria-hidden="true"
               decoding="async"
               src="/assets/images/portfolio/port9.jpg"
-              alt="kew kitchen cabinets"
+              alt="nieuwe keukenkasten"
               loading="lazy"
               width="400"
               height="560"
             />
           </picture>
 
-          <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+          <!-- Om meer afbeeldingen toe te voegen, kopieer en plak de picture tags van deze rij hier in volgorde van cs-picture-1 tot cs-picture-3 en ze behouden dezelfde lay-out -->
         </div>
       </div>
-      <a href="/contact" class="cs-button-solid">Get Free Quote</a>
+      <a href="/contact" class="cs-button-solid">Vraag een Gratis Offerte Aan</a>
     </div>
   </section>
   <CTA />
 </BaseLayout>
 
 <style lang="less">
-  /* PAGE-SPECIFIC STYLES FOR THE PROJECTS PAGE */
+  /* PAGINA-SPECIFIEKE STIJLEN VOOR DE PROJECTEN PAGINA */
 
   /*-- -------------------------- -->
-<---          Gallery           -->
+<---          Galerij           -->
 <--- -------------------------- -*/
 
-  /* Mobile - 360px - Contains hover animation */
+  /* Mobiel - 360px - Bevat hover animatie */
   @media only screen and (min-width: 0em) {
     #gallery {
-      /* Centers button */
+      /* Centreert knop */
       text-align: center;
       padding: var(--sectionPadding);
       position: relative;
-      /* Prevents overflow from the image going off screen */
+      /* Voorkomt overflow van de afbeelding die buiten het scherm gaat */
       overflow: hidden;
       .cs-container {
         width: 100%;
@@ -237,7 +237,7 @@ import Landing from "@components/Landing.astro";
       }
 
       .cs-image-group {
-        /* used rem so it doesn't scale with the font size of on parent */
+        /* gebruikt rem zodat het niet schaalt met de lettergrootte van de ouder */
         font-size: ~"min(1.1vw, 1em)";
         width: 100%;
         max-width: (1322/16em);

@@ -18,7 +18,7 @@ posts.sort(
 
 <BaseLayout
   title="Blog"
-  description="Meta description for the page"
+  description="Meta beschrijving voor de pagina"
   preloadImg="/assets/images/cabinets2.jpg"
 >
   <!-- ============================================ -->
@@ -30,18 +30,18 @@ posts.sort(
   />
 
   <!-- ============================================ -->
-  <!--              Main Blog Content               -->
+  <!--              Hoofdinhoud Blog                -->
   <!-- ============================================ -->
    <div class="main-content-wrapper" style="margin-top: 2vh;">
   <Search id="search" className="pagefind-ui" uiOptions={{ showImages: false }} /></div>
   <div class="blog-container main-content-wrapper">
-    <!--Main content -->
+    <!--Hoofdinhoud -->
    
     <div class="main-content">
       <!-- ============================================ -->
-      <!--                 Blog Articles                -->
+      <!--                 Blog Artikelen               -->
       <!-- ============================================ -->
-      {posts.length === 0 && <h1>No Recent Posts</h1>}
+      {posts.length === 0 && <h1>Geen Recente Berichten</h1>}
       {
         posts.length >= 1 &&
           posts.map((post) => (
@@ -61,7 +61,7 @@ posts.sort(
                   <picture class="blog-author-img">
                     <img
                       src="/assets/svgs/profile.svg"
-                      alt="house"
+                      alt="profiel"
                       width="32"
                       height="32"
                       decoding="async"
@@ -74,7 +74,7 @@ posts.sort(
                 <h2 class="blog-h1">{post.data.title}</h2>
                 <p class="blog-desc">{post.data.description}</p>
                 <a href={post.slug} class="blog-link">
-                  Continue Reading
+                  Lees Verder
                 </a>
               </div>
             </article>

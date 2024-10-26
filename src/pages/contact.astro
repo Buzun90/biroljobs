@@ -7,7 +7,7 @@ import Landing from "@components/Landing.astro";
 
 <BaseLayout
   title="Contact"
-  description="Meta description for the page"
+  description="Neem contact op met ElementJob voor professioneel onderhoud van uw klimaatsystemen in de Randstad."
 >
   <!-- ============================================ -->
   <!--                    LANDING                   -->
@@ -23,76 +23,74 @@ import Landing from "@components/Landing.astro";
 
   <section id="cs-contact">
     <div class="cs-container">
-      <form id="cs-form" name="Contact Form" method="post">
+      <form id="cs-form" name="Contact Formulier" method="post">
         <div class="cs-content">
           <span class="cs-topper">Contact</span>
-          <h2 class="cs-title">Get in Touch</h2>
+          <h2 class="cs-title">Neem Contact Op</h2>
           <p class="cs-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus
-            elementum ullamcorper ipsum porttitor aliquam. Id magna urna
-            ultrices odio pulvinar. Sed ut.
+            Heeft u vragen over onze diensten of wilt u een afspraak maken? Vul het onderstaande formulier in en wij nemen zo spoedig mogelijk contact met u op.
           </p>
         </div>
         <label>
-          Name
+          Naam
           <input
             required
             type="text"
             id="name"
             name="name"
-            placeholder="Name"
+            placeholder="Uw naam"
           />
         </label>
         <label>
-          Email
+          E-mail
           <input
             required
-            type="text"
+            type="email"
             id="email"
             name="email"
-            placeholder="Email"
+            placeholder="Uw e-mailadres"
           />
         </label>
         <label>
-          Phone
+          Telefoon
           <input
             required
-            type="text"
+            type="tel"
             id="phone"
             name="phone"
-            placeholder="Phone"
+            placeholder="Uw telefoonnummer"
           />
         </label>
         <label>
-          How Did You Find Us
+          Hoe heeft u ons gevonden?
           <input
             type="text"
             id="find"
             name="find-us"
-            placeholder="How did you find us?"
+            placeholder="Hoe heeft u ons gevonden?"
           />
         </label>
         <label class="cs-label-message">
-          Message
+          Bericht
           <textarea
             required
             name="Message"
             id="message"
-            placeholder="Write message..."></textarea>
+            placeholder="Schrijf uw bericht hier..."></textarea>
         </label>
-        <button class="cs-button-solid" type="submit">Submit Message</button>
+        <button class="cs-button-solid" type="submit">Verstuur Bericht</button>
       </form>
       <div class="cs-right-section">
         <!--Email-->
-        <span class="cs-header">Email</span>
+        <span class="cs-header">E-mail</span>
         <a class="cs-link" href={`mailto:${client.email}`}>{client.email}</a>
         <!--Phone-->
-        <span class="cs-header">Phone</span>
+        <span class="cs-header">Telefoon</span>
         <a class="cs-link" href={`tel:${client.phoneForTel}`}
           >{client.phoneFormatted}</a
         >
         <!--Address-->
-        <span class="cs-header">Address</span>
+        <span class="cs-header">Adres</span>
         <a class="cs-link" href={client.address.mapLink}>
           {client.address.lineOne},
           <br />
@@ -115,7 +113,7 @@ import Landing from "@components/Landing.astro";
             aria-hidden="true"
             decoding="async"
             src="/assets/images/skyscraper.jpg"
-            alt="building"
+            alt="gebouw"
             loading="lazy"
             width="2500"
             height="1667"

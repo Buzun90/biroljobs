@@ -1,11 +1,14 @@
 ---
+import { FaGithub } from 'react-icons/fa';
 import client from "@data/client.json";
 import { getCurrentYear } from "@libs/utils"
 
 const currentYear = getCurrentYear()
 ---
 
-<!-- ============================================ --><!--                   Footer                     --><!-- ============================================ -->
+<!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
 <footer id="footer">
   <div class="container">
     <div class="left-section">
@@ -13,47 +16,34 @@ const currentYear = getCurrentYear()
         ><img
           loading="lazy"
           decoding="async"
-          src="/assets/svgs/logo-white.svg"
+          src="/assets/images/logo.png"
           alt="logo"
-          width="264"
-          height="78"
+          width="1024"
+          height="512"
         /></a
       >
       <p>
-        Extra content if you need it, if not you can delete this whole p tag. I
-        usually do.
+        ElementJob: Uw specialist in professioneel onderhoud van klimaatsystemen in de Randstad. Van airconditioning tot zonnepanelen, wij zorgen voor optimale prestaties en een gezonde werkomgeving in Noord-Holland, Zuid-Holland en omstreken.
       </p>
     </div>
     <div class="right-section">
       <div class="lists">
         <ul>
           <li>
-            <h2>Information</h2>
+            <h2>Informatie</h2>
           </li>
           <li>
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/about">About Us</a>
+            <a href="/about">Over Ons</a>
           </li>
           <li>
-            <a href="/projects">Projects</a>
-          </li>
-          <li>
-            <a href="/testimonials">Reviews</a>
+            <a href="/projects">Projecten</a>
           </li>
           <li>
             <a href="/contact">Contact</a>
           </li>
-        </ul>
-        <ul>
-          <li>
-            <h2>Services</h2>
-          </li>
-          <li>Service1</li>
-          <li>Service2</li>
-          <li>Service4</li>
-          <li>Service5</li>
         </ul>
         <ul>
           <li>
@@ -75,7 +65,7 @@ const currentYear = getCurrentYear()
             </a>
           </li>
           <li>
-            <a href={`mailto:${client.email}`}>Click to Email</a>
+            <a href={`mailto:${client.email}`}>Klik om te e-mailen</a>
           </li>
         </ul>
       </div>
@@ -83,9 +73,11 @@ const currentYear = getCurrentYear()
   </div>
 
   <div class="credit">
-    <span>Designed and Hand Coded by</span>
-    <a href="/" target="_blank" rel="noopener">Your Company Name</a>
-    <span class="copyright"> Copyright {currentYear} - Present</span>
+    <a href="https://github.com/ItsRayRay" target="_blank" rel="noopener" class="github-link">
+      <FaGithub />
+      ItsRayRay
+    </a>
+    <span class="copyright"> Copyright {currentYear} - Heden</span>
   </div>
 </footer>
 
@@ -103,15 +95,16 @@ const currentYear = getCurrentYear()
       margin-bottom: (50/16rem);
       .logo {
         text-align: center;
-        width: auto;
-        height: (32/16em);
+        width: 100%;
+        max-width: 200px; // Set a max-width for mobile
+        height: auto; // Allow height to adjust automatically
         margin: auto;
         margin-bottom: (30/16em);
         display: inline-block;
 
         img {
-          width: auto;
-          height: 100%;
+          width: 100%; // Make the image fill the container
+          height: auto; // Maintain aspect ratio
           display: block;
         }
       }
@@ -261,8 +254,17 @@ const currentYear = getCurrentYear()
 
       .logo {
         text-align: left;
-        height: (40/16rem);
+        width: 100%;
+        max-width: 250px; // Increase max-width for desktop
+        height: auto;
         margin-left: 0;
+        margin-bottom: (30/16em);
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
       }
 
       p {
@@ -339,4 +341,34 @@ const currentYear = getCurrentYear()
   }
 }
 
+/* Add this new style for the GitHub link */
+.credit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  
+  .github-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #7cfc00; // Bright green color for the GitHub icon and text
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .copyright {
+    color: #ffffff;
+  }
+}
 </style>
