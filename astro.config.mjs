@@ -7,5 +7,8 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [icon(), partytown(), pagefind(), react()]
+  integrations: [icon(), partytown(), pagefind(), react()],
+  alias: {
+    '@images': '/src/assets/images',
+  },
 });
