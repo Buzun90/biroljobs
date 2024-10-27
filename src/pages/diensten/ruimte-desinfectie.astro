@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ruimteDesinfectie from "../../assets/images/diensten/Ruimte Desinfectie.jpg";
 ---
 
 <BaseLayout title="Ruimte Desinfectie" description="Description for Ruimte Desinfectie">
@@ -34,8 +35,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                     <!--Mobile Image-->
                     <source media="(max-width: 600px)" srcset="https://placehold.co/600x400?text=ruimte+desinfectie">
                     <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="https://placehold.co/600x400?text=ruimte+desinfectie">
-                    <img decoding="async" src="https://placehold.co/600x400?text=ruimte+desinfectie" alt="Ruimte Desinfectie" width="542" height="520" aria-hidden="true">
+                    <source media="(min-width: 601px)" srcset={ruimteDesinfectie.src}>
+                    <img decoding="async" src={ruimteDesinfectie.src} alt="Ruimte Desinfectie" width="542" height="520" aria-hidden="true">
                 </picture>
             </div>
         </div>

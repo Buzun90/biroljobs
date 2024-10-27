@@ -4,6 +4,8 @@ import CSPicture from "@components/TemplateComponents/CSPicture.astro";
 import mobileImage from "@assets/images/CTA/construction-m.jpg"
 import desktopImage from "@assets/images/CTA/cabinets2.jpg"
 import fallbackImage from "@assets/images/CTA/cabinets2.jpg"
+import CTAa from "../assets/images/diensten/cta.jpeg"
+import legionellabeheer from "../assets/images/diensten/Home1.jpeg";
 ---
 
 <section id="cta">
@@ -18,30 +20,25 @@ import fallbackImage from "@assets/images/CTA/cabinets2.jpg"
     </p>
     <a href="/contact" class="cs-button-solid">Vraag Nu een Offerte Aan</a>
   </div>
-  <CSPicture
-    mobileImgUrl={mobileImage}
-    mobileMediaWidth="600px"
-    desktopImgUrl={desktopImage}
-    desktopMediaWidth="601px"
-    fallbackImgUrl={fallbackImage}
-    alt=""
-  />
-  <!-- <picture>
+  <picture>
     <source
       media="(max-width: 600px)"
-      srcset="/assets/images/cabinets2-m.jpg"
+      srcset={CTAa.src}
     />
-    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg" />
+    <source 
+      media="(min-width: 601px)" 
+      srcset={CTAa.src}
+    />
     <img
-      aria-hidden="true"
-      decoding="async"
-      src="/assets/images/cabinets2.jpg"
-      alt="kitchen cabinets"
+      src={CTAa.src}
+      alt="Professioneel onderhoud voor klimaatsystemen"
       loading="lazy"
+      decoding="async"
       width="2500"
       height="1667"
+      class="cta-image"
     />
-  </picture> -->
+  </picture>
 </section>
 
 <style lang="less">
@@ -87,6 +84,16 @@ import fallbackImage from "@assets/images/CTA/cabinets2.jpg"
       margin-bottom: (36/16rem);
       color: #fff;
       opacity: 1;
+    }
+
+    .cta-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: -2;
     }
   }
 }

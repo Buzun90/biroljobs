@@ -2,64 +2,28 @@
 import BaseLayout from "src/layouts/BaseLayout.astro";
 import CTA from "@components/CTA.astro";
 import Landing from "@components/Landing.astro";
+import logoImage from "../assets/images/diensten/Koelcellen.png";
 ---
 
 <BaseLayout
   title="Over Ons"
   description="Leer meer over ElementJob, uw specialist in professioneel onderhoud van klimaatsystemen in de Randstad."
 >
-  <!-- ============================================ -->
-  <!--                    LANDING                   -->
-  <!-- ============================================ -->
-
-  <Landing 
-    title="Over Ons"
-  />
-
-  <!-- ============================================ -->
-  <!--                 Side By Side                 -->
-  <!-- ============================================ -->
+  <Landing title="Over Ons" />
 
   <section id="sbs">
     <div class="cs-container">
       <!-- Left Image Section -->
       <div class="cs-left">
         <picture class="cs-picture cs-picture1">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/airco-onderhoud-m.jpg"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/airco-onderhoud.jpg"
-          />
           <img
-            aria-hidden="true"
-            decoding="async"
-            src="/assets/images/airco-onderhoud.jpg"
-            alt="Airconditioning onderhoud"
+            src={logoImage.src}
+            alt="ElementJob Logo"
             loading="lazy"
-            width="400"
-            height="563"
-          />
-        </picture>
-        <picture class="cs-picture cs-picture2">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/zonnepanelen-m.jpg"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/zonnepanelen.jpg"
-          />
-          <img
-            aria-hidden="true"
             decoding="async"
-            src="/assets/images/zonnepanelen.jpg"
-            alt="Zonnepanelen installatie"
-            loading="lazy"
-            width="400"
-            height="563"
+            width="522"
+            height="581"
+            class="cs-main-img"
           />
         </picture>
       </div>
@@ -69,9 +33,6 @@ import Landing from "@components/Landing.astro";
         <h2 class="cs-title">Uw Partner in onderhoudsoplossingen voor de utiliteitsbouw</h2>
         <p class="cs-text">
           Wij bieden gespecialiseerde onderhoudsdiensten aan in Noord-Holland, Zuid-Holland en de hele Randstad. Van onderhoud aan klimaattechniek tot aan diverse reinigingswerkzaamheden, wij zorgen voor efficiënte werking van uw bouwkundige installaties.
-        </p>
-        <p class="cs-text">
-          
         </p>
         <div class="cs-flex-group">
           <p class="cs-flex-p">
@@ -122,47 +83,29 @@ import Landing from "@components/Landing.astro";
       }
 
       .cs-left {
-        /* scaling the font size with the view width */
-        font-size: ~"min(2.31vw, .7em)";
-        /* using ems so we can use font size to scale the whole section */
         width: (631/16em);
         height: (636/16em);
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .cs-picture {
         border-radius: (24/16em);
         display: block;
-        position: absolute;
-        /* clips img tag corners */
         overflow: hidden;
-        img {
-          width: 100%;
-          height: 100%;
-          /* makes image act like a background image */
-          object-fit: cover;
-          position: absolute;
-          top: 0;
-          left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .cs-main-img {
+          width: 80%;
+          height: auto;
+          object-fit: contain;
         }
-      }
-
-      .cs-picture1 {
-        width: (522/16em);
-        height: (581/16em);
-        top: 0;
-        left: 0;
-      }
-
-      .cs-picture2 {
-        width: (414/16em);
-        height: (400/16em);
-        background-color: #fff;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-        /* 6px - 12px */
-        border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-        right: 0;
-        bottom: 0;
       }
 
       .cs-right {

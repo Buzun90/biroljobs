@@ -10,6 +10,28 @@ import { Image } from "astro:assets";
 // zorg dat de alt tekst beschrijft wat er op de image staat
 
 import meetingImage from "../assets/images/landing.png";
+import airconditioning from "../assets/images/diensten/Airconditioning.jpg";
+import airfinbanken from "../assets/images/diensten/Airfinbanken.jpg";
+import diepteReiniging from "../assets/images/diensten/diepte reiniging keuken.png";
+import condensors from "../assets/images/diensten/Drycoolers.jpeg";
+import fancoilUnits from "../assets/images/diensten/Fancoil Units Inductie Units.jpg";
+import luchtverdeelslangen from "../assets/images/diensten/Luchtverdeelslangen.jpg";
+import zonnepanelen from "../assets/images/diensten/Zonnepanelen.jpg";
+import ruimteDesinfectie from "../assets/images/diensten/Ruimte Desinfectie.jpg";
+import koelcellen from "../assets/images/diensten/Koelcellen.png";
+import koelmeubelen from "../assets/images/diensten/Koelmeubelen.png";
+import luchtbehandelingskasten from "../assets/images/diensten/luchtbehandelingskasten.jpg";
+import machinekamer from "../assets/images/diensten/Machinekamer.jpeg";
+import ventilatoren from "../assets/images/diensten/Ventilatoren.jpg";
+import verdamperLuchtkoelers from "../assets/images/diensten/Verdamper Luchtkoelers.jpg";
+import warmtewisselaar from "../assets/images/diensten/Warmtewisselaar.png";
+import legionellabeheer from "../assets/images/diensten/Home1.jpeg"; // Using home1 as replacement
+
+import home1 from "../assets/images/diensten/Home1.jpeg"
+import home2 from "../assets/images/diensten/home2.jpeg"
+
+
+
 ---
 
 <BaseLayout
@@ -97,7 +119,7 @@ import meetingImage from "../assets/images/landing.png";
       </div>  
       <div class="cs-wrapper">
           <img
-              src={meetingImage.src}
+              src={home1.src}
               alt="Elementjob team aan het werk"
               class="cs-picture"
               loading="lazy"
@@ -118,198 +140,356 @@ import meetingImage from "../assets/images/landing.png";
 <!-- ============================================ -->
 
 <section id="services-1254">
-  <div class="cs-container">
-      <div class="cs-content">
-          <div class="cs-flex-group">
-              <span class="cs-topper">Onze Diensten</span>
-              <h2 class="cs-title">Onderhoud voor de utiliteitsbouw</h2>
-          </div>
-          <p class="cs-text">
-              Elementjob biedt een uitgebreid scala aan onderhoudsdiensten voor de utiliteitsbouw. Van klimaattechniek en legionellabeheer tot diverse schoonmaakwerkzaamheden: wij zorgen voor duurzame prestaties en een schone werkomgeving. Ontdek hieronder ons volledige dienstenaanbod."
-          </p>
-      </div>
-      <ul class="cs-card-group">
-          <li class="cs-item">
-              <a href="/diensten/airconditioning/" class="cs-link">
-                  <h3 class="cs-h3">Airconditioning</h3>
-                  <p class="cs-item-text">Onderhoud voor optimale koeling en energiebesparing.</p>
-              </a>
-              <picture class="cs-item-background">
-                  <source media="(max-width: 600px)" srcset="https://example.com/images/airconditioning-small.jpg">
-                  <source media="(min-width: 601px)" srcset="https://example.com/images/airconditioning.jpg">
-                  <img decoding="async" src="https://example.com/images/airconditioning.jpg" alt="Airconditioning" width="413" height="374" aria-hidden="true">
-              </picture>
-          </li>
-          <li class="cs-item">
-              <a href="/diensten/airfinbanken/" class="cs-link">
-                  <h3 class="cs-h3">Airfinbanken</h3>
-                  <p class="cs-item-text">Onderhoud aan airfinbanken voor efficiënte warmteoverdracht.</p>
-              </a>
-              <picture class="cs-item-background">
-                  <source media="(max-width: 600px)" srcset="https://example.com/images/airfinbanken-small.jpg">
-                  <source media="(min-width: 601px)" srcset="https://example.com/images/airfinbanken.jpg">
-                  <img decoding="async" src="https://example.com/images/airfinbanken.jpg" alt="Airfinbanken" width="413" height="374" aria-hidden="true">
-              </picture>
-          </li>
-          <li class="cs-item">
-              <a href="/diensten/condensors-drycoolers/" class="cs-link">
-                  <h3 class="cs-h3">Condensors (Drycoolers)</h3>
-                  <p class="cs-item-text">Betrouwbaar onderhoud voor condensors en drycoolers om maximale efficiëntie te garanderen.</p>
-              </a>
-              <picture class="cs-item-background">
-                  <source media="(max-width: 600px)" srcset="https://example.com/images/condensors-small.jpg">
-                  <source media="(min-width: 601px)" srcset="https://example.com/images/condensors.jpg">
-                  <img decoding="async" src="https://example.com/images/condensors.jpg" alt="Condensors (Drycoolers)" width="413" height="374" aria-hidden="true">
-              </picture>
-          </li>
-          <li class="cs-item">
-              <a href="/diensten/diepte-reiniging-keuken/" class="cs-link">
-                  <h3 class="cs-h3">Diepte reiniging keuken & Sanitair</h3>
-                  <p class="cs-item-text">Grondige reiniging van keukens en sanitaire voorzieningen voor optimale hygiëne.</p>
-              </a>
-              <picture class="cs-item-background">
-                  <source media="(max-width: 600px)" srcset="https://example.com/images/diepte-reiniging-small.jpg">
-                  <source media="(min-width: 601px)" srcset="https://example.com/images/diepte-reiniging.jpg">
-                  <img decoding="async" src="https://example.com/images/diepte-reiniging.jpg" alt="Diepte reiniging keuken & Sanitair" width="413" height="374" aria-hidden="true">
-              </picture>
-          </li>
-          <li class="cs-item">
-              <a href="/diensten/fancoil-units-inductie-units/" class="cs-link">
-                  <h3 class="cs-h3">Fancoil Units / Inductie Units</h3>
-                  <p class="cs-item-text">Onderhoud van fancoil en inductie units voor duurzame klimaatbeheersing.</p>
-              </a>
-              <picture class="cs-item-background">
-                  <source media="(max-width: 600px)" srcset="https://example.com/images/fancoil-units-small.jpg">
-                  <source media="(min-width: 601px)" srcset="https://example.com/images/fancoil-units.jpg">
-                  <img decoding="async" src="https://example.com/images/fancoil-units.jpg" alt="Fancoil Units / Inductie Units" width="413" height="374" aria-hidden="true">
-              </picture>
-          </li>
-          <li class="cs-item">
-              <a href="/diensten/luchtverdeelslangen/" class="cs-link">
-                  <h3 class="cs-h3">Luchtverdeelslangen</h3>
-                  <p class="cs-item-text">Reiniging en vervanging van luchtverdeelslangen.</p>
-              </a>
-              <picture class="cs-item-background">
-                  <source media="(max-width: 600px)" srcset="https://example.com/images/luchtverdeelslangen-small.jpg">
-                  <source media="(min-width: 601px)" srcset="https://example.com/images/luchtverdeelslangen.jpg">
-                  <img decoding="async" src="https://example.com/images/luchtverdeelslangen.jpg" alt="Luchtverdeelslangen" width="413" height="374" aria-hidden="true">
-              </picture>
-          </li>
-          <li class="cs-item">
-              <a href="/diensten/zonnepanelen/" class="cs-link">
-                  <h3 class="cs-h3">Zonnepanelen</h3>
-                  <p class="cs-item-text">Deskundige reiniging van zonnepanelen voor optimale opbrengsten.</p>
-              </a>
-              <picture class="cs-item-background">
-                  <source media="(max-width: 600px)" srcset="https://example.com/images/zonnepanelen-small.jpg">
-                  <source media="(min-width: 601px)" srcset="https://example.com/images/zonnepanelen.jpg">
-                  <img decoding="async" src="https://example.com/images/zonnepanelen.jpg" alt="Zonnepanelen" width="413" height="374" aria-hidden="true">
-              </picture>
-          </li>
-          <li class="cs-item">
-              <a href="/diensten/ruimte-desinfectie/" class="cs-link">
-                  <h3 class="cs-h3">Ruimte Desinfectie</h3>
-                  <p class="cs-item-text">Professionele desinfectie voor een gezonde werkomgeving.</p>
-              </a>
-              <picture class="cs-item-background">
-                  <source media="(max-width: 600px)" srcset="https://example.com/images/ruimte-desinfectie-small.jpg">
-                  <source media="(min-width: 601px)" srcset="https://example.com/images/ruimte-desinfectie.jpg">
-                  <img decoding="async" src="https://example.com/images/ruimte-desinfectie.jpg" alt="Ruimte Desinfectie" width="413" height="374" aria-hidden="true">
-              </picture>
-          </li>
-          <li class="cs-item">
-              <a href="/diensten/koelcellen/" class="cs-link">
-                  <h3 class="cs-h3">Koelcellen</h3>
-                  <p class="cs-item-text">Onderhoud en reinigingvan koelcellen voor optimale koelprestaties.</p>
-              </a>
-              <picture class="cs-item-background">
-                  <source media="(max-width: 600px)" srcset="https://example.com/images/koelcellen-small.jpg">
-                  <source media="(min-width: 601px)" srcset="https://example.com/images/koelcellen.jpg">
-                  <img decoding="async" src="https://example.com/images/koelcellen.jpg" alt="Koelcellen" width="413" height="374" aria-hidden="true">
-              </picture>
-          </li>
-          <li class="cs-item">
-              <a href="/diensten/koelmeubelen/" class="cs-link">
-                  <h3 class="cs-h3">Koelmeubelen</h3>
-                  <p class="cs-item-text">Onderhoud en reiniging van koelmeubelen voor consistente koeling en energiebesparing.</p>
-              </a>
-              <picture class="cs-item-background">
-                  <source media="(max-width: 600px)" srcset="https://example.com/images/koelmeubelen-small.jpg">
-                  <source media="(min-width: 601px)" srcset="https://example.com/images/koelmeubelen.jpg">
-                  <img decoding="async" src="https://example.com/images/koelmeubelen.jpg" alt="Koelmeubelen" width="413" height="374" aria-hidden="true">
-              </picture>
-          </li>
-          <li class="cs-item">
-              <a href="/diensten/luchtbehandelingskasten/" class="cs-link">
-                  <h3 class="cs-h3">Luchtbehandelingskasten</h3>
-                  <p class="cs-item-text">Onderhoud van luchtbehandelingskasten voor een optimaal binnenklimaat en efficiënte werking.</p>
-              </a>
-              <picture class="cs-item-background">
-                  <source media="(max-width: 600px)" srcset="https://example.com/images/luchtbehandelingskasten-small.jpg">
-                  <source media="(min-width: 601px)" srcset="https://example.com/images/luchtbehandelingskasten.jpg">
-                  <img decoding="async" src="https://example.com/images/luchtbehandelingskasten.jpg" alt="Luchtbehandelingskasten" width="413" height="374" aria-hidden="true">
-              </picture>
-          </li>
-          <li class="cs-item">
-              <a href="/diensten/machinekamer/" class="cs-link">
-                  <h3 class="cs-h3">Machinekamer</h3>
-                  <p class="cs-item-text">Schoonmaak en beheer van machinekamers voor ononderbroken werking van uw installaties.</p>
-              </a>
-              <picture class="cs-item-background">
-                  <source media="(max-width: 600px)" srcset="https://example.com/images/machinekamer-small.jpg">
-                  <source media="(min-width: 601px)" srcset="https://example.com/images/machinekamer.jpg">
-                  <img decoding="async" src="https://example.com/images/machinekamer.jpg" alt="Machinekamer" width="413" height="374" aria-hidden="true">
-              </picture>
-          </li>
-          <li class="cs-item">
-              <a href="/diensten/ventilatoren/" class="cs-link">
-                  <h3 class="cs-h3">Ventilatoren</h3>
-                  <p class="cs-item-text">Onderhoud en reparatie van ventilatiesystemen voor efficiënte luchtcirculatie.</p>
-              </a>
-              <picture class="cs-item-background">
-                  <source media="(max-width: 600px)" srcset="https://example.com/images/ventilatoren-small.jpg">
-                  <source media="(min-width: 601px)" srcset="https://example.com/images/ventilatoren.jpg">
-                  <img decoding="async" src="https://example.com/images/ventilatoren.jpg" alt="Ventilatoren" width="413" height="374" aria-hidden="true">
-              </picture>
-          </li>
-          <li class="cs-item">
-              <a href="/diensten/verdamper-luchtkoelers/" class="cs-link">
-                  <h3 class="cs-h3">Verdamper/luchtkoelers</h3>
-                  <p class="cs-item-text">Specialistisch onderhoud van verdampers en luchtkoelers voor optimale koeling.</p>
-              </a>
-              <picture class="cs-item-background">
-                  <source media="(max-width: 600px)" srcset="https://example.com/images/verdamper-luchtkoelers-small.jpg">
-                  <source media="(min-width: 601px)" srcset="https://example.com/images/verdamper-luchtkoelers.jpg">
-                  <img decoding="async" src="https://example.com/images/verdamper-luchtkoelers.jpg" alt="Verdamper/luchtkoelers" width="413" height="374" aria-hidden="true">
-              </picture>
-          </li>
-          <li class="cs-item">
-              <a href="/diensten/warmtewisselaar/" class="cs-link">
-                  <h3 class="cs-h3">Warmtewisselaar</h3>
-                  <p class="cs-item-text">Onderhoud van warmtewisselaars voor efficiënte overdracht.</p>
-              </a>
-              <picture class="cs-item-background">
-                  <source media="(max-width: 600px)" srcset="https://example.com/images/warmtewisselaar-small.jpg">
-                  <source media="(min-width: 601px)" srcset="https://example.com/images/warmtewisselaar.jpg">
-                  <img decoding="async" src="https://example.com/images/warmtewisselaar.jpg" alt="Warmtewisselaar" width="413" height="374" aria-hidden="true">
-              </picture>
-          </li>
-          <li class="cs-item">
-              <a href="/diensten/legionellabeheer/" class="cs-link">
-                  <h3 class="cs-h3">Legionellabeheer</h3>
-                  <p class="cs-item-text">Effectieve maatregelen en beheer voor legionellapreventie en veilig watergebruik.</p>
-              </a>
-              <picture class="cs-item-background">
-                  <source media="(max-width: 600px)" srcset="https://example.com/images/legionellabeheer-small.jpg">
-                  <source media="(min-width: 601px)" srcset="https://example.com/images/legionellabeheer.jpg">
-                  <img decoding="async" src="https://example.com/images/legionellabeheer.jpg" alt="Legionellabeheer" width="413" height="374" aria-hidden="true">
-              </picture>
-          </li>
-      </ul>
-  </div>
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex-group">
+                <span class="cs-topper">Onze Diensten</span>
+                <h2 class="cs-title">Onderhoud voor de utiliteitsbouw</h2>
+            </div>
+            <p class="cs-text">
+                Elementjob biedt een uitgebreid scala aan onderhoudsdiensten voor de utiliteitsbouw. Van klimaattechniek en legionellabeheer tot diverse schoonmaakwerkzaamheden: wij zorgen voor duurzame prestaties en een schone werkomgeving. Ontdek hieronder ons volledige dienstenaanbod."
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item" style="position: relative; overflow: hidden;">
+                <a href="/diensten/airconditioning/" class="cs-link" style="position: relative; z-index: 2; display: block; height: 100%; text-decoration: none; color: white;">
+                    <div style="position: relative; z-index: 2; padding: 1.5rem;">
+                        <h3 class="cs-h3" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Airconditioning</h3>
+                        <p class="cs-item-text" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Onderhoud voor optimale koeling en energiebesparing.</p>
+                    </div>
+                </a>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                    <img
+                        src={airconditioning.src}
+                        alt="Airconditioning"
+                        class="cs-item-background"
+                        loading="lazy"
+                        decoding="async"
+                        width="413"
+                        height="374"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                    />
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));"></div>
+                </div>
+            </li>
+            <li class="cs-item" style="position: relative; overflow: hidden;">
+                <a href="/diensten/airfinbanken/" class="cs-link" style="position: relative; z-index: 2; display: block; height: 100%; text-decoration: none; color: white;">
+                    <div style="position: relative; z-index: 2; padding: 1.5rem;">
+                        <h3 class="cs-h3" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Airfinbanken</h3>
+                        <p class="cs-item-text" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Onderhoud aan airfinbanken voor efficiënte warmteoverdracht.</p>
+                    </div>
+                </a>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                    <img
+                        src={airfinbanken.src}
+                        alt="Airfinbanken"
+                        class="cs-item-background"
+                        loading="lazy"
+                        decoding="async"
+                        width="413"
+                        height="374"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                    />
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));"></div>
+                </div>
+            </li>
+            <li class="cs-item" style="position: relative; overflow: hidden;">
+                <a href="/diensten/condensors-drycoolers/" class="cs-link" style="position: relative; z-index: 2; display: block; height: 100%; text-decoration: none; color: white;">
+                    <div style="position: relative; z-index: 2; padding: 1.5rem;">
+                        <h3 class="cs-h3" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Condensors (Drycoolers)</h3>
+                        <p class="cs-item-text" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Betrouwbaar onderhoud voor condensors en drycoolers om maximale efficiëntie te garanderen.</p>
+                    </div>
+                </a>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                    <img
+                        src={condensors.src}
+                        alt="Condensors (Drycoolers)"
+                        class="cs-item-background"
+                        loading="lazy"
+                        decoding="async"
+                        width="413"
+                        height="374"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                    />
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));"></div>
+                </div>
+            </li>
+            <li class="cs-item" style="position: relative; overflow: hidden;">
+                <a href="/diensten/diepte-reiniging-keuken/" class="cs-link" style="position: relative; z-index: 2; display: block; height: 100%; text-decoration: none; color: white;">
+                    <div style="position: relative; z-index: 2; padding: 1.5rem;">
+                        <h3 class="cs-h3" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Diepte reiniging keuken & Sanitair</h3>
+                        <p class="cs-item-text" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Grondige reiniging van keukens en sanitaire voorzieningen voor optimale hygiëne.</p>
+                    </div>
+                </a>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                    <img
+                        src={diepteReiniging.src}
+                        alt="Diepte reiniging keuken & Sanitair"
+                        class="cs-item-background"
+                        loading="lazy"
+                        decoding="async"
+                        width="413"
+                        height="374"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                    />
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));"></div>
+                </div>
+            </li>
+            <li class="cs-item" style="position: relative; overflow: hidden;">
+                <a href="/diensten/fancoil-units-inductie-units/" class="cs-link" style="position: relative; z-index: 2; display: block; height: 100%; text-decoration: none; color: white;">
+                    <div style="position: relative; z-index: 2; padding: 1.5rem;">
+                        <h3 class="cs-h3" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Fancoil Units / Inductie Units</h3>
+                        <p class="cs-item-text" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Onderhoud van fancoil en inductie units voor duurzame klimaatbeheersing.</p>
+                    </div>
+                </a>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                    <img
+                        src={fancoilUnits.src}
+                        alt="Fancoil Units / Inductie Units"
+                        class="cs-item-background"
+                        loading="lazy"
+                        decoding="async"
+                        width="413"
+                        height="374"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                    />
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));"></div>
+                </div>
+            </li>
+            <li class="cs-item" style="position: relative; overflow: hidden;">
+                <a href="/diensten/luchtverdeelslangen/" class="cs-link" style="position: relative; z-index: 2; display: block; height: 100%; text-decoration: none; color: white;">
+                    <div style="position: relative; z-index: 2; padding: 1.5rem;">
+                        <h3 class="cs-h3" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Luchtverdeelslangen</h3>
+                        <p class="cs-item-text" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Reiniging en vervanging van luchtverdeelslangen.</p>
+                    </div>
+                </a>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                    <img
+                        src={luchtverdeelslangen.src}
+                        alt="Luchtverdeelslangen"
+                        class="cs-item-background"
+                        loading="lazy"
+                        decoding="async"
+                        width="413"
+                        height="374"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                    />
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));"></div>
+                </div>
+            </li>
+            <li class="cs-item" style="position: relative; overflow: hidden;">
+                <a href="/diensten/zonnepanelen/" class="cs-link" style="position: relative; z-index: 2; display: block; height: 100%; text-decoration: none; color: white;">
+                    <div style="position: relative; z-index: 2; padding: 1.5rem;">
+                        <h3 class="cs-h3" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Zonnepanelen</h3>
+                        <p class="cs-item-text" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Deskundige reiniging van zonnepanelen voor optimale opbrengsten.</p>
+                    </div>
+                </a>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                    <img
+                        src={zonnepanelen.src}
+                        alt="Zonnepanelen"
+                        class="cs-item-background"
+                        loading="lazy"
+                        decoding="async"
+                        width="413"
+                        height="374"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                    />
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));"></div>
+                </div>
+            </li>
+            <li class="cs-item" style="position: relative; overflow: hidden;">
+                <a href="/diensten/ruimte-desinfectie/" class="cs-link" style="position: relative; z-index: 2; display: block; height: 100%; text-decoration: none; color: white;">
+                    <div style="position: relative; z-index: 2; padding: 1.5rem;">
+                        <h3 class="cs-h3" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Ruimte Desinfectie</h3>
+                        <p class="cs-item-text" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Professionele desinfectie voor een gezonde werkomgeving.</p>
+                    </div>
+                </a>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                    <img
+                        src={ruimteDesinfectie.src}
+                        alt="Ruimte Desinfectie"
+                        class="cs-item-background"
+                        loading="lazy"
+                        decoding="async"
+                        width="413"
+                        height="374"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                    />
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));"></div>
+                </div>
+            </li>
+            <li class="cs-item" style="position: relative; overflow: hidden;">
+                <a href="/diensten/koelcellen/" class="cs-link" style="position: relative; z-index: 2; display: block; height: 100%; text-decoration: none; color: white;">
+                    <div style="position: relative; z-index: 2; padding: 1.5rem;">
+                        <h3 class="cs-h3" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Koelcellen</h3>
+                        <p class="cs-item-text" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Onderhoud en reinigingvan koelcellen voor optimale koelprestaties.</p>
+                    </div>
+                </a>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                    <img
+                        src={koelcellen.src}
+                        alt="Koelcellen"
+                        class="cs-item-background"
+                        loading="lazy"
+                        decoding="async"
+                        width="413"
+                        height="374"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                    />
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));"></div>
+                </div>
+            </li>
+            <li class="cs-item" style="position: relative; overflow: hidden;">
+                <a href="/diensten/koelmeubelen/" class="cs-link" style="position: relative; z-index: 2; display: block; height: 100%; text-decoration: none; color: white;">
+                    <div style="position: relative; z-index: 2; padding: 1.5rem;">
+                        <h3 class="cs-h3" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Koelmeubelen</h3>
+                        <p class="cs-item-text" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Onderhoud en reiniging van koelmeubelen voor consistente koeling en energiebesparing.</p>
+                    </div>
+                </a>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                    <img
+                        src={koelmeubelen.src}
+                        alt="Koelmeubelen"
+                        class="cs-item-background"
+                        loading="lazy"
+                        decoding="async"
+                        width="413"
+                        height="374"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                    />
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));"></div>
+                </div>
+            </li>
+            <li class="cs-item" style="position: relative; overflow: hidden;">
+                <a href="/diensten/luchtbehandelingskasten/" class="cs-link" style="position: relative; z-index: 2; display: block; height: 100%; text-decoration: none; color: white;">
+                    <div style="position: relative; z-index: 2; padding: 1.5rem;">
+                        <h3 class="cs-h3" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Luchtbehandelingskasten</h3>
+                        <p class="cs-item-text" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Onderhoud van luchtbehandelingskasten voor een optimaal binnenklimaat en efficiënte werking.</p>
+                    </div>
+                </a>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                    <img
+                        src={luchtbehandelingskasten.src}
+                        alt="Luchtbehandelingskasten"
+                        class="cs-item-background"
+                        loading="lazy"
+                        decoding="async"
+                        width="413"
+                        height="374"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                    />
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));"></div>
+                </div>
+            </li>
+            <li class="cs-item" style="position: relative; overflow: hidden;">
+                <a href="/diensten/machinekamer/" class="cs-link" style="position: relative; z-index: 2; display: block; height: 100%; text-decoration: none; color: white;">
+                    <div style="position: relative; z-index: 2; padding: 1.5rem;">
+                        <h3 class="cs-h3" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Machinekamer</h3>
+                        <p class="cs-item-text" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Schoonmaak en beheer van machinekamers voor ononderbroken werking van uw installaties.</p>
+                    </div>
+                </a>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                    <img
+                        src={machinekamer.src}
+                        alt="Machinekamer"
+                        class="cs-item-background"
+                        loading="lazy"
+                        decoding="async"
+                        width="413"
+                        height="374"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                    />
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));"></div>
+                </div>
+            </li>
+            <li class="cs-item" style="position: relative; overflow: hidden;">
+                <a href="/diensten/ventilatoren/" class="cs-link" style="position: relative; z-index: 2; display: block; height: 100%; text-decoration: none; color: white;">
+                    <div style="position: relative; z-index: 2; padding: 1.5rem;">
+                        <h3 class="cs-h3" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Ventilatoren</h3>
+                        <p class="cs-item-text" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Onderhoud en reparatie van ventilatiesystemen voor efficiënte luchtcirculatie.</p>
+                    </div>
+                </a>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                    <img
+                        src={ventilatoren.src}
+                        alt="Ventilatoren"
+                        class="cs-item-background"
+                        loading="lazy"
+                        decoding="async"
+                        width="413"
+                        height="374"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                    />
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));"></div>
+                </div>
+            </li>
+            <li class="cs-item" style="position: relative; overflow: hidden;">
+                <a href="/diensten/verdamper-luchtkoelers/" class="cs-link" style="position: relative; z-index: 2; display: block; height: 100%; text-decoration: none; color: white;">
+                    <div style="position: relative; z-index: 2; padding: 1.5rem;">
+                        <h3 class="cs-h3" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Verdamper/luchtkoelers</h3>
+                        <p class="cs-item-text" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Specialistisch onderhoud van verdampers en luchtkoelers voor optimale koeling.</p>
+                    </div>
+                </a>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                    <img
+                        src={verdamperLuchtkoelers.src}
+                        alt="Verdamper/luchtkoelers"
+                        class="cs-item-background"
+                        loading="lazy"
+                        decoding="async"
+                        width="413"
+                        height="374"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                    />
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));"></div>
+                </div>
+            </li>
+            <li class="cs-item" style="position: relative; overflow: hidden;">
+                <a href="/diensten/warmtewisselaar/" class="cs-link" style="position: relative; z-index: 2; display: block; height: 100%; text-decoration: none; color: white;">
+                    <div style="position: relative; z-index: 2; padding: 1.5rem;">
+                        <h3 class="cs-h3" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Warmtewisselaar</h3>
+                        <p class="cs-item-text" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Onderhoud van warmtewisselaars voor efficiënte overdracht.</p>
+                    </div>
+                </a>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                    <img
+                        src={warmtewisselaar.src}
+                        alt="Warmtewisselaar"
+                        class="cs-item-background"
+                        loading="lazy"
+                        decoding="async"
+                        width="413"
+                        height="374"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                    />
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));"></div>
+                </div>
+            </li>
+            <li class="cs-item" style="position: relative; overflow: hidden;">
+                <a href="/diensten/legionellabeheer/" class="cs-link" style="position: relative; z-index: 2; display: block; height: 100%; text-decoration: none; color: white;">
+                    <div style="position: relative; z-index: 2; padding: 1.5rem;">
+                        <h3 class="cs-h3" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Legionellabeheer</h3>
+                        <p class="cs-item-text" style="color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Effectieve maatregelen en beheer voor legionellapreventie en veilig watergebruik.</p>
+                    </div>
+                </a>
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                    <img
+                        src={legionellabeheer.src}
+                        alt="Legionellabeheer"
+                        class="cs-item-background"
+                        loading="lazy"
+                        decoding="async"
+                        width="413"
+                        height="374"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                    />
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </section>
-
-                              
 
  
 
@@ -320,10 +500,10 @@ import meetingImage from "../assets/images/landing.png";
   <div class="cs-container">
       <picture class="cs-picture">
           <!--Mobile Image-->
-          <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/models.png">
+          <source media="(max-width: 600px)" srcset={home2.src}>
           <!--Tablet and above Image-->
-          <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/models.png">
-          <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/models.png" alt="Professionele schoonmaak- en onderhoudsdiensten" width="586" height="690">
+          <source media="(min-width: 601px)" srcset={home2.src}>
+          <img loading="lazy" decoding="async" src={home2.src} alt="Professionele schoonmaak- en onderhoudsdiensten" width="586" height="690">
       </picture>
       <div class="cs-content">
           <span class="cs-topper">Onze Specialisaties</span>

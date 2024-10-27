@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import koelcellen from "../../assets/images/diensten/Koelcellen.png";
 ---
 
 <BaseLayout title="Koelcellen" description="Description for Koelcellen">
@@ -32,10 +33,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             <div class="cs-image-group">
                 <picture class="cs-picture">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="https://placehold.co/600x400?text=koelcellen">
+                        <source media="(max-width: 600px)" srcset={koelcellen.src}>
                     <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="https://placehold.co/600x400?text=koelcellen">
-                    <img decoding="async" src="https://placehold.co/600x400?text=koelcellen" alt="Koelcellen" width="542" height="520" aria-hidden="true">
+                    <source media="(min-width: 601px)" srcset={koelcellen.src}>
+                    <img decoding="async" src={koelcellen.src} alt="Koelcellen" width="542" height="520" aria-hidden="true">
                 </picture>
             </div>
         </div>
