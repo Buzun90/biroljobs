@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import verdamper from "../../assets/images/diensten/Verdamper Luchtkoelers.jpg";
 ---
 
 <BaseLayout title="Onderhoud Verdampers & Luchtkoelers | Koeltechniek | Elementjob" description="Specialist in onderhoud en reiniging van verdampers en luchtkoelers. Optimaliseer uw koelsysteem voor maximale efficiëntie en betrouwbaarheid met professioneel onderhoud.">
@@ -34,10 +35,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             <div class="cs-image-group">
                 <picture class="cs-picture">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="https://placehold.co/600x400?text=verdamper+luchtkoelers">
+                    <source media="(max-width: 600px)" srcset={verdamper.src}>
                     <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="https://placehold.co/600x400?text=verdamper+luchtkoelers">
-                    <img decoding="async" src="https://placehold.co/600x400?text=verdamper+luchtkoelers" alt="Professioneel onderhoud van verdampers en luchtkoelers door Elementjob" width="542" height="520" aria-hidden="true">
+                    <source media="(min-width: 601px)" srcset={verdamper.src}>
+                    <img decoding="async" src={verdamper.src} alt="Professioneel onderhoud van verdampers en luchtkoelers door Elementjob" width="542" height="520" aria-hidden="true">
                 </picture>
             </div>
         </div>

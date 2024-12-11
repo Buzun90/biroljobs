@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import legionellabeheer from "../../assets/images/diensten/Legionellabeheer.jpeg";
 ---
 
 <BaseLayout title="Legionellabeheer & Waterkwaliteit Controle | Elementjob" description="Professioneel legionellabeheer en waterkwaliteit controle voor een gezonde werkomgeving. Voldoe aan alle wet- en regelgeving met onze expertise in waterbeheersing.">
@@ -34,10 +35,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             <div class="cs-image-group">
                 <picture class="cs-picture">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="https://placehold.co/600x400?text=legionellabeheer">
+                    <source media="(max-width: 600px)" srcset={legionellabeheer.src}>
                     <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="https://placehold.co/600x400?text=legionellabeheer">
-                    <img decoding="async" src="https://placehold.co/600x400?text=legionellabeheer" alt="Professioneel legionellabeheer en waterkwaliteit controle door Elementjob" width="542" height="520" aria-hidden="true">
+                    <source media="(min-width: 601px)" srcset={legionellabeheer.src}>
+                    <img decoding="async" src={legionellabeheer.src} alt="Professioneel legionellabeheer en waterkwaliteit controle door Elementjob" width="542" height="520" aria-hidden="true">
                 </picture>
             </div>
         </div>
