@@ -23,19 +23,7 @@ import Landing from "@components/Landing.astro";
 
   <section id="cs-contact">
     <div class="cs-container">
-      <form 
-        id="cs-form" 
-        name="Contact Formulier" 
-        method="POST" 
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-      >
-        <input type="hidden" name="form-name" value="Contact Formulier" />
-        <p class="hidden">
-          <label>
-            Don't fill this out if you're human: <input name="bot-field" />
-          </label>
-        </p>
+      <form id="cs-form" name="Contact Formulier" method="post">
         <div class="cs-content">
           <span class="cs-topper">Contact</span>
           <h2 class="cs-title">Neem Contact Op</h2>
@@ -465,11 +453,5 @@ import Landing from "@components/Landing.astro";
         }
       }
     }
-  }
-</style>
-
-<style>
-  .hidden {
-    display: none !important;
   }
 </style>
