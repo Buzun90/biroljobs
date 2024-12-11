@@ -23,7 +23,14 @@ import Landing from "@components/Landing.astro";
 
   <section id="cs-contact">
     <div class="cs-container">
-      <form id="cs-form" name="Contact Formulier" method="post">
+      <form 
+        id="cs-form" 
+        name="Contact Formulier" 
+        method="POST" 
+        data-netlify="true"
+        netlify
+      >
+        <input type="hidden" name="form-name" value="Contact Formulier" />
         <div class="cs-content">
           <span class="cs-topper">Contact</span>
           <h2 class="cs-title">Neem Contact Op</h2>
@@ -122,6 +129,34 @@ import Landing from "@components/Landing.astro";
       </div>
     </div>
   </section>
+  <script>
+    // Handle form submission
+    const form = document.getElementById("cs-form");
+    if (form) {
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+
+        try {
+          const response = await fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+          });
+
+          if (response.ok) {
+            alert("Bedankt voor uw bericht. We nemen zo spoedig mogelijk contact met u op.");
+            form.reset();
+          } else {
+            throw new Error("Form submission failed");
+          }
+        } catch (error) {
+          alert("Er is een fout opgetreden. Probeer het later opnieuw.");
+          console.error("Error:", error);
+        }
+      });
+    }
+  </script>
 </BaseLayout>
 
 <style lang="less">
