@@ -13,7 +13,7 @@ tags:
 ---
 **Bedankt voor een Fantastisch Jaar – Onze Beste Wensen voor het Nieuwe Jaar en een Vrolijke Kerst**
 
-Beste opdrachtgevers en relaties,
+Beste opdrachtgevers, leveranciers en relaties,
 
 Terwijl het jaar ten einde loopt, willen wij van **Elementjob** graag van de gelegenheid gebruik maken om jullie te bedanken voor het vertrouwen en de geweldige samenwerking in 2024. Het was een jaar vol uitdagingen, groei en mooie prestaties, en we zijn dankbaar voor de kans om samen met jullie aan projecten op het gebied van klimaattechniek en schoonmaak te werken.
 
