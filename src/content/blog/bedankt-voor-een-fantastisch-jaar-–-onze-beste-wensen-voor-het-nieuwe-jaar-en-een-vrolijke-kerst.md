@@ -6,7 +6,7 @@ description: Terwijl het jaar ten einde loopt, willen wij van Elementjob graag
   de geweldige samenwerking in 2024.
 author: R. Boerema / B. Uzun
 date: 2024-12-12T15:10:00.000Z
-image: src/assets/images/blog/elementjob-2.png
+image: src/assets/images/blog/elementjob-jp.jpg
 imageAlt: Kerst logo
 tags:
   - post
