@@ -6,7 +6,7 @@ description: egionella beheer is een cruciaal onderdeel van gebouwbeheer en
   legionella-preventie, de noodzakelijke periodieke taken en de wettelijke
   verplichtingen die hierbij komen kijken.
 author: Birol Uzun
-date: 2024-12-12T18:08:00.000Z
+date: 2024-10-12T19:08:00.000Z
 image: src/assets/images/blog/whatsapp-image-2024-12-12-at-18.07.01.jpeg
 imageAlt: Meet taak
 tags:
