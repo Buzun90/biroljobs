@@ -6,7 +6,7 @@ description: In de moderne wereld van klimaatbeheersing en duurzame energie, is
   toepassing van de juiste filters kan een enorme invloed hebben op de werking
   van je klimaatinstallatie
 author: Birol Uzun
-date: 2024-11-12T18:36:00.000Z
+date: 2024-11-05T18:40:00.000Z
 image: src/assets/images/blog/home2.b3qpxzrz.jpeg
 imageAlt: Luchtbehandelkast Filters
 tags:
