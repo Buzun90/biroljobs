@@ -14,9 +14,6 @@ imageAlt: Vastgelopen warmtewiel
 tags:
   - post
 ---
-
-
-
 ### De gevolgen van achterstallig onderhoud: warmtewielen in luchtbehandelsystemen
 
 Als specialisten in klimaattechniek komen wij het helaas te vaak tegen: warmtewielen in luchtbehandelsystemen die ernstig beschadigd raken door achterstallig onderhoud. Warmtewielen zijn cruciale onderdelen in moderne HVAC-installaties. Ze zorgen voor energieterugwinning door warmte uit de afgevoerde lucht over te dragen aan de frisse lucht die het gebouw binnenkomt. Dit verhoogt niet alleen het comfort, maar bespaart ook aanzienlijk op energie. Toch wordt het belang van regelmatig onderhoud aan deze systemen vaak onderschat. In deze blog leggen wij uit waarom onderhoud essentieel is en wat de gevolgen zijn van verwaarlozing.
@@ -42,9 +39,9 @@ Als warmtewielen niet goed worden onderhouden, kunnen er verschillende problemen
 5. **Volledige stilstand van het systeem**
    In het ergste geval kan een warmtewiel volledig vastlopen of breken. Reparatie of vervanging brengt vaak hoge kosten met zich mee, om nog maar te zwijgen van de verstoring die dit veroorzaakt in het gebouwbeheer.
 
-#### Een praktijkvoorbeeld: het retourcentrum in Waalwijk
+#### Een praktijkvoorbeeld: Een distributiecentrum in Waalwijk
 
-Een recent voorbeeld illustreert perfect de risico’s van achterstallig onderhoud. Enkele dagen geleden kwamen wij een ernstig beschadigd warmtewiel tegen in een rooftopper-unit van het retourcentrum in Waalwijk. Door jarenlange verwaarlozing was het warmtewiel vastgelopen en functioneerde de unit niet meer naar behoren. Deze situatie had vermeden kunnen worden met regelmatig onderhoud, wat ook hoge reparatiekosten en onnodige stilstand had bespaard.
+Een recent voorbeeld illustreert perfect de risico’s van achterstallig onderhoud *zie afbeelding*. Enkele dagen geleden kwamen wij een ernstig beschadigd warmtewiel tegen op het dat van een distributiecentrum in Waalwijk. Door jarenlange verwaarlozing was het warmtewiel vastgelopen en functioneerde de unit niet meer naar behoren. Deze situatie had vermeden kunnen worden met regelmatig onderhoud, wat ook hoge reparatiekosten en onnodige stilstand had bespaard.
 
 #### Hoe voorkom je problemen met warmtewielen?
 
