@@ -11,7 +11,15 @@ const {description, title} = Astro.props;
 ---
 <!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
 <html lang="en">
-        <head>
+        <head><!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJPKZZDM1Y"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-GJPKZZDM1Y');
+        </script>
             <!-- View Transitions support -->
             <ViewTransitions />
 
