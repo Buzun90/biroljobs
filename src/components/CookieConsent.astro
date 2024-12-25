@@ -67,10 +67,12 @@
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     z-index: 1000;
-    transition: bottom 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(100%);
 }
 
 .cookie-banner.show {
+    transform: translateY(0);
     bottom: 0;
 }
 
@@ -107,14 +109,26 @@
     color: white;
 }
 
+.accept-all:hover {
+    background: #45a049;
+}
+
 .accept-necessary {
     background: #f0f0f0;
     color: #333;
 }
 
+.accept-necessary:hover {
+    background: #e4e4e4;
+}
+
 .settings {
     background: #2196F3;
     color: white;
+}
+
+.settings:hover {
+    background: #1e87db;
 }
 
 .cookie-modal {
@@ -299,25 +313,36 @@ class CookieConsent {
     }
 
     showBanner() {
-        this.banner?.classList.add('show');
+        if (this.banner) {
+            // Force a reflow
+            void this.banner.offsetWidth;
+            this.banner.classList.add('show');
+        }
     }
 
     hideBanner() {
-        this.banner?.classList.remove('show');
+        if (this.banner) {
+            this.banner.classList.remove('show');
+        }
     }
 
     openSettings() {
-        this.modal?.classList.add('show');
+        if (this.modal) {
+            this.modal.classList.add('show');
+        }
     }
 
     closeSettings() {
-        this.modal?.classList.remove('show');
+        if (this.modal) {
+            this.modal.classList.remove('show');
+        }
     }
 
     checkCookieConsent() {
         const consent = this.getCookie(this.cookieName);
         if (!consent) {
-            this.showBanner();
+            // Small delay to ensure the animation works
+            setTimeout(() => this.showBanner(), 100);
         } else {
             const parsedConsent = JSON.parse(consent);
             this.updateConsentState(parsedConsent);
