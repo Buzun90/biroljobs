@@ -141,72 +141,97 @@
 
 <script is:inline>
 document.addEventListener('DOMContentLoaded', function() {
+    // Get DOM elements
     const banner = document.getElementById('cookie-consent');
     const modal = document.getElementById('cookie-settings-modal');
     const acceptAllBtn = document.getElementById('accept-all');
     const acceptNecessaryBtn = document.getElementById('accept-necessary');
     const settingsBtn = document.getElementById('cookie-settings');
     const savePreferencesBtn = document.getElementById('save-preferences');
-    
-    // Show banner if no consent is stored
-    const hasConsent = localStorage.getItem('cookieConsent');
-    if (!hasConsent) {
-        banner.classList.add('show');
-    }
 
     // Function to update GTM consent state
     function updateConsentState(analytics = false, marketing = false) {
+        // Make sure gtag is available
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+
+        console.log('Updating consent state:', { analytics, marketing });
+        
         gtag('consent', 'update', {
             'analytics_storage': analytics ? 'granted' : 'denied',
             'ad_storage': marketing ? 'granted' : 'denied',
             'ad_user_data': marketing ? 'granted' : 'denied',
             'ad_personalization': marketing ? 'granted' : 'denied'
         });
-        
+
         // Store consent in localStorage
-        localStorage.setItem('cookieConsent', JSON.stringify({
+        const consentData = {
             necessary: true,
             analytics: analytics,
             marketing: marketing,
             timestamp: new Date().toISOString()
-        }));
+        };
+        
+        localStorage.setItem('cookieConsent', JSON.stringify(consentData));
+        console.log('Consent saved:', consentData);
+    }
+
+    // Show banner if no consent is stored
+    const hasConsent = localStorage.getItem('cookieConsent');
+    if (!hasConsent) {
+        banner.classList.add('show');
     }
 
     // Accept all cookies
-    acceptAllBtn.addEventListener('click', () => {
-        updateConsentState(true, true);
-        banner.classList.remove('show');
-    });
+    if (acceptAllBtn) {
+        acceptAllBtn.addEventListener('click', () => {
+            console.log('Accept all clicked');
+            updateConsentState(true, true);
+            banner.classList.remove('show');
+        });
+    }
 
     // Accept only necessary cookies
-    acceptNecessaryBtn.addEventListener('click', () => {
-        updateConsentState(false, false);
-        banner.classList.remove('show');
-    });
+    if (acceptNecessaryBtn) {
+        acceptNecessaryBtn.addEventListener('click', () => {
+            console.log('Accept necessary clicked');
+            updateConsentState(false, false);
+            banner.classList.remove('show');
+        });
+    }
 
     // Open settings modal
-    settingsBtn.addEventListener('click', () => {
-        modal.style.display = 'block';
-        
-        // Load saved preferences
-        const savedConsent = localStorage.getItem('cookieConsent');
-        if (savedConsent) {
-            const preferences = JSON.parse(savedConsent);
-            document.getElementById('analytics').checked = preferences.analytics;
-            document.getElementById('marketing').checked = preferences.marketing;
-        }
-    });
+    if (settingsBtn) {
+        settingsBtn.addEventListener('click', () => {
+            console.log('Settings clicked');
+            modal.style.display = 'block';
+            
+            // Load saved preferences
+            const savedConsent = localStorage.getItem('cookieConsent');
+            if (savedConsent) {
+                const preferences = JSON.parse(savedConsent);
+                const analyticsCheckbox = document.getElementById('analytics');
+                const marketingCheckbox = document.getElementById('marketing');
+                
+                if (analyticsCheckbox) analyticsCheckbox.checked = preferences.analytics;
+                if (marketingCheckbox) marketingCheckbox.checked = preferences.marketing;
+            }
+        });
+    }
 
     // Save preferences
-    savePreferencesBtn.addEventListener('click', () => {
-        const analyticsConsent = document.getElementById('analytics').checked;
-        const marketingConsent = document.getElementById('marketing').checked;
-        
-        updateConsentState(analyticsConsent, marketingConsent);
-        
-        modal.style.display = 'none';
-        banner.classList.remove('show');
-    });
+    if (savePreferencesBtn) {
+        savePreferencesBtn.addEventListener('click', () => {
+            console.log('Save preferences clicked');
+            const analyticsConsent = document.getElementById('analytics')?.checked || false;
+            const marketingConsent = document.getElementById('marketing')?.checked || false;
+            
+            updateConsentState(analyticsConsent, marketingConsent);
+            
+            modal.style.display = 'none';
+            banner.classList.remove('show');
+        });
+    }
 
     // Close modal when clicking outside
     window.addEventListener('click', (e) => {
@@ -217,8 +242,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Load and apply saved consent on page load
     if (hasConsent) {
-        const savedConsent = JSON.parse(hasConsent);
-        updateConsentState(savedConsent.analytics, savedConsent.marketing);
+        try {
+            const savedConsent = JSON.parse(hasConsent);
+            updateConsentState(savedConsent.analytics, savedConsent.marketing);
+        } catch (error) {
+            console.error('Error loading saved consent:', error);
+        }
     }
 });
 </script>
