@@ -1,6 +1,6 @@
 ---
-import Picture from "astro/components/Picture.astro"
-import landingImage from "@assets/images/landing.png" // The asset must be imported from src in order to be used in <Picture /> or <Image />
+import { Picture } from "astro:assets"
+import landingImage from "@assets/images/landing.png"
 const { title } = Astro.props
 ---
 
@@ -11,10 +11,9 @@ const { title } = Astro.props
 <Picture 
     src={landingImage}
     formats={['avif', 'webp']} 
-    alt="A description of my image."
+    alt="kitchen cabinets"
     aria-hidden="true" 
     decoding="async"
-    alt="kitchen cabinets"
     loading="eager"
 />
 
