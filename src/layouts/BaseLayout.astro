@@ -20,10 +20,37 @@ const {description, title} = Astro.props;
             
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-GJPKZZDM1Y', {
-                'cookie_flags': 'SameSite=None;Secure'
+
+            // Function to enable analytics
+            function enableAnalytics() {
+                window['ga-disable-G-GJPKZZDM1Y'] = false;
+                gtag('js', new Date());
+                gtag('config', 'G-GJPKZZDM1Y', {
+                    'cookie_flags': 'SameSite=None;Secure'
+                });
+            }
+
+            // Function to disable analytics
+            function disableAnalytics() {
+                window['ga-disable-G-GJPKZZDM1Y'] = true;
+            }
+
+            // Listen for consent changes
+            document.addEventListener('consentUpdated', function(e) {
+                if (e.detail.analytics === true) {
+                    enableAnalytics();
+                } else {
+                    disableAnalytics();
+                }
             });
+
+            // Check initial consent
+            if (localStorage.getItem('cookieConsent')) {
+                const consent = JSON.parse(localStorage.getItem('cookieConsent'));
+                if (consent.analytics === true) {
+                    enableAnalytics();
+                }
+            }
         </script>
         <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-GJPKZZDM1Y"></script>
 
