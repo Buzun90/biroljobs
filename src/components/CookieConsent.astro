@@ -140,16 +140,8 @@
 </style>
 
 <script is:inline>
-console.log('Cookie consent script starting...');
-
-// Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, initializing cookie consent...');
-    
-    // Get DOM elements
     const banner = document.getElementById('cookie-consent');
-    console.log('Banner element:', banner);
-    
     const modal = document.getElementById('cookie-settings-modal');
     const acceptAllBtn = document.getElementById('accept-all');
     const acceptNecessaryBtn = document.getElementById('accept-necessary');
@@ -158,69 +150,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Show banner if no consent is stored
     const hasConsent = localStorage.getItem('cookieConsent');
-    console.log('Existing consent:', hasConsent);
-    
     if (!hasConsent) {
-        console.log('No consent found, showing banner...');
         banner.classList.add('show');
     }
-    
-    // Accept all cookies
-    acceptAllBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', JSON.stringify({
-            necessary: true,
-            analytics: true,
-            marketing: true
-        }));
-        banner.classList.remove('show');
-        
-        // Enable Google Analytics
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { window.dataLayer.push(arguments); }
-        gtag('consent', 'update', {
-            'analytics_storage': 'granted',
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted'
-        });
-    });
-    
-    // Accept only necessary cookies
-    acceptNecessaryBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', JSON.stringify({
-            necessary: true,
-            analytics: false,
-            marketing: false
-        }));
-        banner.classList.remove('show');
-    });
-    
-    // Open settings modal
-    settingsBtn.addEventListener('click', function() {
-        modal.classList.add('show');
-    });
-    
-    // Close modal when clicking outside
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            modal.classList.remove('show');
-        }
-    });
-    
-    // Save preferences
-    savePreferencesBtn.addEventListener('click', function() {
-        const analytics = document.getElementById('analytics').checked;
-        const marketing = document.getElementById('marketing').checked;
-        
-        localStorage.setItem('cookieConsent', JSON.stringify({
-            necessary: true,
-            analytics: analytics,
-            marketing: marketing
-        }));
-        
-        // Update Google Analytics consent
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { window.dataLayer.push(arguments); }
+
+    // Function to update GTM consent state
+    function updateConsentState(analytics = false, marketing = false) {
         gtag('consent', 'update', {
             'analytics_storage': analytics ? 'granted' : 'denied',
             'ad_storage': marketing ? 'granted' : 'denied',
@@ -228,8 +163,62 @@ document.addEventListener('DOMContentLoaded', function() {
             'ad_personalization': marketing ? 'granted' : 'denied'
         });
         
-        modal.classList.remove('show');
+        // Store consent in localStorage
+        localStorage.setItem('cookieConsent', JSON.stringify({
+            necessary: true,
+            analytics: analytics,
+            marketing: marketing,
+            timestamp: new Date().toISOString()
+        }));
+    }
+
+    // Accept all cookies
+    acceptAllBtn.addEventListener('click', () => {
+        updateConsentState(true, true);
         banner.classList.remove('show');
     });
+
+    // Accept only necessary cookies
+    acceptNecessaryBtn.addEventListener('click', () => {
+        updateConsentState(false, false);
+        banner.classList.remove('show');
+    });
+
+    // Open settings modal
+    settingsBtn.addEventListener('click', () => {
+        modal.style.display = 'block';
+        
+        // Load saved preferences
+        const savedConsent = localStorage.getItem('cookieConsent');
+        if (savedConsent) {
+            const preferences = JSON.parse(savedConsent);
+            document.getElementById('analytics').checked = preferences.analytics;
+            document.getElementById('marketing').checked = preferences.marketing;
+        }
+    });
+
+    // Save preferences
+    savePreferencesBtn.addEventListener('click', () => {
+        const analyticsConsent = document.getElementById('analytics').checked;
+        const marketingConsent = document.getElementById('marketing').checked;
+        
+        updateConsentState(analyticsConsent, marketingConsent);
+        
+        modal.style.display = 'none';
+        banner.classList.remove('show');
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Load and apply saved consent on page load
+    if (hasConsent) {
+        const savedConsent = JSON.parse(hasConsent);
+        updateConsentState(savedConsent.analytics, savedConsent.marketing);
+    }
 });
 </script>
