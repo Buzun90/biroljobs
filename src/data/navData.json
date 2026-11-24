@@ -76,6 +76,10 @@
       {
         "key": "Legionellabeheer",
         "url": "/diensten/legionellabeheer/"
+      },
+      {
+        "key": "Elektrotechnisch onderhoud & reiniging",
+        "url": "/diensten/elektrotechnisch-onderhoud/"
       }
     ]
   },
