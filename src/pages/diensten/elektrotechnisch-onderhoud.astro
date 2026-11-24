@@ -1,6 +1,18 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import elektrotechnischOnderhoud from "../../assets/images/diensten/Elektrotechnisch Onderhoud.png";
+import { Image } from "astro:assets";
+import elektrotechnischOnderhoud from "../../assets/images/diensten/Elektrotechnisch Onderhoud.jpg";
+import installatiesImage from "../../assets/images/diensten/Elektrotechnische Installaties.jpg";
+import noodverlichtingImage from "../../assets/images/diensten/Noodverlichting.jpg";
+import droogreinigingImage from "../../assets/images/diensten/Droogreiniging Meterkast.jpg";
+
+const inlineImageProps = {
+    widths: [480, 800, 1200],
+    sizes: "(max-width: 768px) 100vw, 740px",
+    class: "cs-inline-image",
+    loading: "lazy" as const,
+    decoding: "async" as const,
+};
 ---
 
 <BaseLayout title="Elektrotechnisch Onderhoud & Droogreiniging | Elementjob" description="Onderhoud en droogreiniging van meterkasten, schakelkasten en noodverlichting. Voorkom storingen en waarborg de veiligheid van uw bedrijfspand.">
@@ -22,6 +34,7 @@ import elektrotechnischOnderhoud from "../../assets/images/diensten/Elektrotechn
                 <h2>Onze elektrotechnische diensten</h2>
 
                 <h3>Onderhoud aan elektrotechnische installaties</h3>
+                <Image src={installatiesImage} alt="Elektrotechnische verdeelinrichting in een bedrijfsgebouw" {...inlineImageProps} />
                 <p>
                     Periodiek onderhoud is belangrijk om de betrouwbaarheid en veiligheid van elektrotechnische installaties te waarborgen. Door installaties regelmatig te controleren, kunnen slijtage, vervuiling en mogelijke gebreken tijdig worden gesignaleerd.
                 </p>
@@ -38,6 +51,7 @@ import elektrotechnischOnderhoud from "../../assets/images/diensten/Elektrotechn
                 </p>
 
                 <h3>Onderhoud en controle van noodverlichting</h3>
+                <Image src={noodverlichtingImage} alt="Verlichte nooduitgangsaanduiding (EXIT) aan het plafond" {...inlineImageProps} />
                 <p>
                     Noodverlichting is een belangrijk onderdeel van de brandveiligheid binnen gebouwen. Bij stroomuitval of calamiteiten moet deze verlichting betrouwbaar functioneren, zodat aanwezigen veilig de weg naar de uitgang kunnen vinden.
                 </p>
@@ -56,6 +70,7 @@ import elektrotechnischOnderhoud from "../../assets/images/diensten/Elektrotechn
                 </p>
 
                 <h3>Droogreiniging van elektrotechnische installaties</h3>
+                <Image src={droogreinigingImage} alt="Groepenkast met installatieautomaten in een meterkast" {...inlineImageProps} />
                 <p>
                     Stof en vuil kunnen zich na verloop van tijd ophopen in elektrotechnische installaties. Vooral in meterkasten, verdeelinrichtingen en schakelkasten kan vervuiling ongewenste warmteontwikkeling en storingen bevorderen.
                 </p>
@@ -109,7 +124,7 @@ import elektrotechnischOnderhoud from "../../assets/images/diensten/Elektrotechn
                     <source media="(max-width: 600px)" srcset={elektrotechnischOnderhoud.src}>
                     <!--Tablet and above Image-->
                     <source media="(min-width: 601px)" srcset={elektrotechnischOnderhoud.src}>
-                    <img decoding="async" src={elektrotechnischOnderhoud.src} alt="Elektrotechnisch onderhoud en droogreiniging door Elementjob" width="542" height="520" aria-hidden="true">
+                    <img decoding="async" src={elektrotechnischOnderhoud.src} alt="Groepenkast met installatieautomaten voor elektrotechnisch onderhoud" width="542" height="520" aria-hidden="true">
                 </picture>
             </div>
         </div>
@@ -243,6 +258,15 @@ import elektrotechnischOnderhoud from "../../assets/images/diensten/Elektrotechn
         width: 100%;
         height: auto;
         display: block;
+    }
+    #content-page-852 .cs-inline-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        box-shadow: 0px 3.3478px 50.2169px rgba(0, 0, 0, 0.16);
+        margin: 0 0 1.5rem 0;
     }
     #content-page-852 .cs-image-group {
         width: 50%;
